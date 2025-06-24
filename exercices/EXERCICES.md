@@ -73,3 +73,43 @@ Plusieurs possibilités :
 - Dans le fichier ```./src/App.jsx```, appeler le composant.
 
 <u>Notes :</u> afin de ne pas propager l’évènement de validation du formulaire, on pourra utiliser la méthode ```e.preventDefault()```.
+
+Notions : CSS, state
+
+## Exercice 4 – Découpage
+
+### 1 - Initialisation du projet
+Plusieurs possibilités :
+- Initialiser le projet via la commande ```npx create-react-app```
+- Continuer sur le même projet
+- Télécharger le projet initialisé depuis le GitHub [Formation React 2025](https://github.com/orgs/Formation-React-2025/repositories) :
+    - ```git clone https://github.com/Formation-React-2025/exercice_4.git```
+
+### 2 - InputText
+- Créer un composant ```InputText``` » dans le package ```./src/components/input/input-text``` ».
+- Le composant retourne un ```uncontrolled``` input de type ```text``` dont la valeur est passée en props.
+- Le composant prend en entrée les props suivantes :
+
+|         Nom         | Description                                                                   |      Type      |  Required   | Valeur par défaut |
+|:-------------------:|-------------------------------------------------------------------------------|:--------------:|:-----------:|:-----------------:|
+|     ```label```     | Label du champ                                                                |  ```string```  | ```true```  |         -         |
+|     ```value```     | Valeur de l'input                                                             |  ```string```  | ```false``` |  ```undefined```  |
+| ```onValueChange``` | Fonction de callback ```(value: string) => void``` à exécuter lors d'un input | ```Function``` | ```false``` |  ```undefined```  |
+|     ```name```      | Name de l'input                                                               |  ```string```  | ```false``` |  ```undefined```  |
+|     ```error```     | Texte à afficher en cas d'erreur                                              |  ```string```  | ```false``` |  ```undefined```  |
+|   ```disabled```    | Pour désactiver le champ                                                      | ```boolean```  | ```false``` |    ```false```    |
+|   ```required```    | Pour rendre le champ obligatoire                                              | ```boolean```  | ```false``` |    ```false```    |
+
+### 2 - LabelButton
+- Créer un composant ```LabelButton``` dans le package ``` ./src/components/input/buttons/label-button```.
+- Le composant retourne un button et prend en entrée les props suivantes :
+
+|      Nom       | Description                                                                                     |      Type      |  Required   | Valeur par défaut |
+|:--------------:|-------------------------------------------------------------------------------------------------|:--------------:|:-----------:|:-----------------:|
+|  ```label```   | Label du bouton                                                                                 |  ```string```  | ```true```  |         -         |
+|   ```type```   | Définit le type de button (```submit```, ```button``` ou ```reset```)                           |  ```string```  | ```false``` |  ```'button'```   |
+| ```onClick```  | Fonction de callback ```(event: HtmlEventt) => void``` à exécuter lors d'un clic sur le bouton  | ```Function``` | ```false``` |  ```undefined```  |
+| ```disabled``` | Pour désactiver le champ                                                                        | ```boolean```  | ```false``` |    ```false```    |
+
+### 3 - Découpage et réutilisation de composants
+- Dans le package ```./src/components/exercices-exercice-4```, re-créer le formulaire de l’exercice 3 en utilisant les nouveaux composants ```InputText``` et ```LabelButton```.
