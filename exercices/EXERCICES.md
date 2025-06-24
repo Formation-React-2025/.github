@@ -48,6 +48,8 @@ Plusieurs possibilités :
  
 - Dans le fichier ```./src/App.jsx```, appeler le composant.
 
+<u>Note :</u> par la suite, nous pourrons duppliquer ce composant dans ```./src/components/layout/exercice-layout/ExerciceLayout``` afin de le réutiliser.
+
 ## Exercice 3
 
 ### Initialisation du projet
@@ -60,12 +62,14 @@ Plusieurs possibilités :
 ### Création d'un composant avec state
 - Dans le package ```./src/components/exercice-3```, créer le composant ```Exercice3```.
 - Le composant retournera un formulaire avec deux champs de saisie de type ```text``` et un bouton de type ```submit```.
--  Les champs seront ```uncontrolled``` et leurs valeurs seront gérées au travers d’un « state » React.
--  Les champs seront les suivants :
-  -	« Nom »
-  -	« Prénom »
+-  Les champs seront ```uncontrolled```, ```required``` et leurs valeurs seront gérées au travers d’un « state » React.
+-  Les libellés des champs seront les suivants :
+    - « Nom »
+    - « Prénom »
 - Le bouton portera la mention « Enregistrer ».
 
 - À la soumission du formulaire, contrôler que les champs obligatoires sont bien renseignés. Si ce n’est pas le cas, afficher les champs en rouge avec un message « Le champ est obligatoire ».
 
 - Dans le fichier ```./src/App.jsx```, appeler le composant.
+
+<u>Notes :</u> afin de ne pas propager l’évènement de validation du formulaire, on pourra utiliser la méthode ```e.preventDefault()```.
