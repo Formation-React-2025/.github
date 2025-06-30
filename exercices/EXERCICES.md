@@ -7,7 +7,7 @@
 - Dans le dossier ```exercice_1``` lancer les commande ```npm install``` (ou ```npm i```) puis ```npm start```
 
 ### Création d'un premier composant React
-- Dans le package ```./src/features/exercices/pages/exercice-1```. créer le composant ```Exercice1Page``` dont le comportement est le suivant :
+- Dans le package ```./src/features/exercice-1/pages```. créer le composant ```Exercice1Page``` dont le comportement est le suivant :
   - Le composant affiche un header avec le titre « Exercice 1 - Création d'un premier composant React »
   -	Le composant affiche en contenu « Hello world ! »
   -	Le composant affiche un footer avec la date et l’heure
@@ -41,17 +41,17 @@ Plusieurs possibilités :
 ### 2 - Création d'un composant avec des props
 - Lancer la commande ```npm install prop-types@15.8.1```.
  
-- Dans le package ```./src/features/exercices/pages/exercice-2```, créer le composant ```Exercice2Page``` dont le comportement est le même que le composant ```Exercice1Page``` aux différences suivantes :
+- Dans le package ```./src/features/exercice-2/pages```, créer le composant ```Exercice2Page``` dont le comportement est le même que le composant ```Exercice1Page``` aux différences suivantes :
   -	Le titre du header est maintenant reçu en props
   - Le titre est "Exercice 2 - Création d'un composant avec props"
   -	Le contenu correspond à la props ```children```
  
 - Dans le fichier ```./src/App.jsx```, appeler le composant.
 
-<u>Note :</u> par la suite, nous pourrons dupliquer ce composant dans ```./src/components/layout/page-layout/PageLayout.jsx``` afin de le réutiliser.
+<u>Note :</u> par la suite, nous pourrons dupliquer ce composant dans ```./src/commons/components/layout/page-layout/PageLayout.jsx``` afin de le réutiliser.
 
 ### 3 - Mise à jour de variable
-- Dans le package ```./src/components/input/buttons/on-click-button```, créer un composant `OnClickButton` :
+- Dans le package ```./src/features/exercice-2/components/on-click-button```, créer un composant `OnClickButton` :
 - Le composant initialise une variable locale à 0
 - Le composant déclare une fonction dont l'exécution incrémente la variable
 - La fonction doit afficher en console (`console.log(.)`) la valeur de la variable avant incrémentation et après incrémentation
@@ -70,12 +70,13 @@ Plusieurs possibilités :
   - ```git clone https://github.com/Formation-React-2025/exercice_3.git```
 
 ### 2 - Mise à jour de variable
-- Dans le package ```./src/components/input/buttons/on-click-button```, créer un composant `OnClickButtonWithState` :
+- Dans le package ```./src/features/exercice-3/components/on-click-button-with-state```, créer un composant `OnClickButtonWithState` :
 - Le composant est iso au composant `OnClickButton` à la différence qu'il utilise le hook `useState` pour la gestion de sa variable.
+- Appeler le composant dans `App.jsx`
 - Que constatez-vous ?
 
 ### 3 - Création d'un composant avec state
-- Dans le package ```./src/features/exercices/pages/exercice-3```, créer le composant ```Exercice3Page```.
+- Dans le package ```./src/features/exercice-3/pages```, créer le composant ```Exercice3Page```.
 - Titre : "Exercice 3 - Création d'un composant avec state"
 - Le composant retournera un formulaire avec deux champs de saisie de type ```text``` et un bouton de type ```submit```.
 -  Les champs seront ```controlled``` (i.e. leurs valeurs seront gérées au travers d’un « state » React) et ```required```
@@ -101,7 +102,7 @@ Plusieurs possibilités :
     - ```git clone https://github.com/Formation-React-2025/exercice_4.git```
 
 ### 2 - InputText
-- Créer un composant ```InputText``` » dans le package ```./src/components/input/input-text``` ».
+- Créer un composant ```InputText``` » dans le package ```./src/commons/components/input/input-text``` ».
 - Le composant retourne un ```controlled``` input de type ```text``` dont la valeur est passée en props.
 - Le composant prend en entrée les props suivantes :
 
@@ -116,7 +117,7 @@ Plusieurs possibilités :
 |   ```required```    | Pour rendre le champ obligatoire                                              | ```boolean```  | ```false``` |    ```false```    |
 
 ### 2 - LabelButton
-- Créer un composant ```LabelButton``` dans le package ``` ./src/components/input/buttons/label-button```.
+- Créer un composant ```LabelButton``` dans le package ``` ./src/commons/components/input/buttons/label-button```.
 - Le composant retourne un button et prend en entrée les props suivantes :
 
 |      Nom       | Description                                                                                     |      Type      |  Required   | Valeur par défaut |
@@ -127,7 +128,7 @@ Plusieurs possibilités :
 | ```disabled``` | Pour désactiver le champ                                                                        | ```boolean```  | ```false``` |    ```false```    |
 
 ### 3 - Découpage et réutilisation de composants
-- Dans le package ```./src/features/exercices/pages/exercice-4```, créer le composant `Exercice4Page`
+- Dans le package ```./src/features/exercice-4/pages```, créer le composant `Exercice4Page`
 - Titre: "Exercice 4 - Composants d'input"
 - Le comportement du composant est le même que celui de l’exercice 3 mais doit cette fois-ci utiliser les nouveaux composants ```InputText``` et ```LabelButton```.
 
